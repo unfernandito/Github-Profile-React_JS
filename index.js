@@ -37,8 +37,13 @@ function fetchProfile() {
 function GitHubProfileCard({username}){
     const [result, loading] = fetchProfile(username)
 
-    return (
-        <div className="container free-bird">
+    let content = null
+
+    if(loading){
+        content = (null)
+    } else {
+        if(result){
+            content = <div className="container free-bird">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-12"></div>
@@ -72,7 +77,10 @@ function GitHubProfileCard({username}){
                 </div>
             </div>
         </div>
-    )
+        }
+    }
+
+    return content
 }
 
 export default GitHubProfileCard
