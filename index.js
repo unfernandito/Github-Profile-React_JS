@@ -13,7 +13,7 @@ function fetchProfile() {
     let url = `${API}/${username}`;
   
     React.useEffect(() => {
-      async function fetchBookList() {
+      async function fetchData() {
         try {
           setLoading("true");
           const response = await fetch(url)
@@ -28,10 +28,11 @@ function fetchProfile() {
         }
       }
   
+      fetchData()
     }, []);
   
     return [result, loading];
-  }
+}
   
 
 function GitHubProfileCard({username}){
@@ -43,40 +44,42 @@ function GitHubProfileCard({username}){
         content = (null)
     } else {
         if(result){
-            content = <div className="container free-bird">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-4 col-md-12"></div>
-                    <div className="col-lg-5 col-md-12">
-                        <div className="card-wrapper">
-                            <div className="card-rotating">
-                                <div className="face front">
-                                    <GitHubImage />
-                                    <GitHubAvatar 
-                                        username={username} 
-                                        avatar={result.avatar} />
-                                    <div className="card-block">
-                                        <GitHubName 
-                                            username={username} 
-                                            name={result.name} 
-                                            location={result.location} 
-                                            company={result.company} />
-                                        <GitHubContact 
-                                            blog={result.blog}
-                                            email={result.email}  />
-                                        <GitHubInfo 
-                                            username={username}
-                                            repo={result.repo}
-                                            followers={result.followers}
-                                            following={result.following} />
+            content = (
+                <div className="container free-bird">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-md-12"></div>
+                            <div className="col-lg-5 col-md-12">
+                                <div className="card-wrapper">
+                                    <div className="card-rotating">
+                                        <div className="face front">
+                                            <GitHubImage />
+                                            <GitHubAvatar 
+                                                username={username} 
+                                                avatar={result.avatar} />
+                                            <div className="card-block">
+                                                <GitHubName 
+                                                    username={username} 
+                                                    name={result.name} 
+                                                    location={result.location} 
+                                                    company={result.company} />
+                                                <GitHubContact 
+                                                    blog={result.blog}
+                                                    email={result.email}  />
+                                                <GitHubInfo 
+                                                    username={username}
+                                                    repo={result.repo}
+                                                    followers={result.followers}
+                                                    following={result.following} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            )
         }
     }
 
