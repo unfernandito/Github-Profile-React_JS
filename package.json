@@ -1,0 +1,11 @@
+{
+  "name": "Github-Profile-React_JS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/unfernandito/Github-Profile-React_JS.git",
+  "author": "unfernandito <lfbu.112@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0"
+  }
+}
