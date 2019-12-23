@@ -7,7 +7,7 @@ import GitHubName from "./component/GitHubName";
 
 const API = "https://api.github.com/users";
 
-function fetchProfile(username) {
+function useFetchProfile(username) {
   const [result, setResult] = React.useState([]);
   const [loading, setLoading] = React.useState("false");
   let url = `${API}/${username}`;
@@ -33,7 +33,7 @@ function fetchProfile(username) {
 }
 
 function GitHubProfileCard({ username }) {
-  const [result, loading] = fetchProfile(username);
+  const [result, loading] = useFetchProfile(username);
 
   let content = null;
 
