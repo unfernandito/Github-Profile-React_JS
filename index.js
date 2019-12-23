@@ -44,8 +44,7 @@ function GitHubProfileCard({username}){
         content = (null)
     } else {
         if(result){
-            content = (
-                <div className="container free-bird">
+            content = (<div className="container free-bird">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-4 col-md-12"></div>
@@ -78,8 +77,7 @@ function GitHubProfileCard({username}){
                             </div>
                         </div>
                     </div>
-                </div>
-            )
+                </div>)
         }
     }
 
