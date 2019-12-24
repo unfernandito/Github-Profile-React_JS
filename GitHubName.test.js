@@ -1,5 +1,5 @@
 import React from "react";
-import GithubName from "./component/GitHubName/index";
+import GithubName from "./src/GitHubName/index";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 

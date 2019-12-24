@@ -1,5 +1,5 @@
 import React from "react";
-import GithubCard from "./index";
+import GithubCard from "./src/index";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 

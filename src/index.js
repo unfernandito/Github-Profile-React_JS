@@ -1,9 +1,9 @@
 import React from "react";
-import GitHubAvatar from "./component/GitHubAvatar";
-import GitHubContact from "./component/GitHubContact";
-import GitHubImage from "./component/GitHubImage";
-import GitHubInfo from "./component/GitHubInfo";
-import GitHubName from "./component/GitHubName";
+import GitHubAvatar from "./GitHubAvatar";
+import GitHubContact from "./GitHubContact";
+import GitHubImage from "./GitHubImage";
+import GitHubInfo from "./GitHubInfo";
+import GitHubName from "./GitHubName";
 
 const API = "https://api.github.com/users";
 

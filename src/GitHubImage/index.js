@@ -4,7 +4,7 @@ function GitHubImage({ url }) {
   return (
     <div className="card-up">
       <img
-        src={url != null ? url : require("../../assets/computer.jpg")}
+        src={url != null ? url : "./assets/computer.jpg"}
         className="img-fluid"
       />
     </div>
