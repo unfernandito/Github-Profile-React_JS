@@ -7,6 +7,9 @@ import GitHubName from "./GitHubName";
 
 const API = "https://api.github.com/users";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
+
 function useFetchProfile(username) {
   const [result, setResult] = React.useState([]);
   const [loading, setLoading] = React.useState("false");

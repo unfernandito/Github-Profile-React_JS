@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles.css";
 
 function GitHubName({ username, name, location, company }) {
   return (
