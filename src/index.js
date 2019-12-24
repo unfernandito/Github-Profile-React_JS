@@ -12,7 +12,7 @@ import "./styles.css";
 
 function useFetchProfile(username) {
   const [result, setResult] = React.useState([]);
-  const [loading, setLoading] = React.useState("false");
+  const [loading, setLoading] = React.useState(true);
   let url = `${API}/${username}`;
 
   React.useEffect(() => {
@@ -24,8 +24,9 @@ function useFetchProfile(username) {
         const json = await response.json();
         console.log(json);
         setResult(json);
+        setLoading(false);
       } catch (error) {
-        setLoading("null");
+        setLoading(false);
       }
     }
 
